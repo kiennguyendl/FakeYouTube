@@ -14,6 +14,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegateFlowLayout {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Home"
+        navigationController?.navigationBar.isTranslucent = false
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(UINib.init(nibName: "HomeCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "VideoCell")
@@ -33,6 +34,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: self.view.frame.width, height: 200)
+        let height = (self.view.frame.width - 32) * (9 / 16)
+        return CGSize(width: self.view.frame.width, height: height + 16 + 69)
     }
 }
