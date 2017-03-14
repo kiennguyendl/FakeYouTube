@@ -12,7 +12,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="FakeYouTuBe" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="PNw-8X-D3D" id="9aj-dP-Y6T"/>
+                <outlet property="menuBarCollectionView" destination="6te-n7-JFM" id="uBT-2X-tb3"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewMenuBar" destination="jRU-IN-rQi" id="PEA-bC-msY"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -21,23 +23,49 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="PNw-8X-D3D">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <rect key="frame" x="0.0" y="50" width="375" height="617"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gUw-uf-Vcp">
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="gUw-uf-Vcp">
                         <size key="itemSize" width="50" height="50"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jRU-IN-rQi">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                    <subviews>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="6te-n7-JFM">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="PHG-ca-ZrD">
+                                <size key="itemSize" width="50" height="50"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                        </collectionView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="6te-n7-JFM" secondAttribute="trailing" id="4jW-hx-pqI"/>
+                        <constraint firstAttribute="height" constant="50" id="BtT-dX-3lJ"/>
+                        <constraint firstItem="6te-n7-JFM" firstAttribute="leading" secondItem="jRU-IN-rQi" secondAttribute="leading" id="YlI-JI-7t7"/>
+                        <constraint firstItem="6te-n7-JFM" firstAttribute="top" secondItem="jRU-IN-rQi" secondAttribute="top" id="iEQ-hd-GLk"/>
+                        <constraint firstAttribute="bottom" secondItem="6te-n7-JFM" secondAttribute="bottom" id="laP-VL-SUr"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="PNw-8X-D3D" secondAttribute="trailing" id="L0Q-qb-sus"/>
-                <constraint firstAttribute="bottom" secondItem="PNw-8X-D3D" secondAttribute="bottom" id="Yvs-ir-l4i"/>
-                <constraint firstItem="PNw-8X-D3D" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="fGb-EI-GEy"/>
-                <constraint firstItem="PNw-8X-D3D" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="k6u-m1-D8e"/>
+                <constraint firstAttribute="bottom" secondItem="PNw-8X-D3D" secondAttribute="bottom" id="Dsf-nW-NxO"/>
+                <constraint firstItem="jRU-IN-rQi" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="JhA-Or-N8U"/>
+                <constraint firstItem="PNw-8X-D3D" firstAttribute="top" secondItem="jRU-IN-rQi" secondAttribute="bottom" id="SvN-H1-XTb"/>
+                <constraint firstAttribute="trailing" secondItem="jRU-IN-rQi" secondAttribute="trailing" id="fDB-xn-Qzr"/>
+                <constraint firstItem="PNw-8X-D3D" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="iNw-yE-bmz"/>
+                <constraint firstItem="jRU-IN-rQi" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="jgo-Sr-nkZ"/>
+                <constraint firstAttribute="trailing" secondItem="PNw-8X-D3D" secondAttribute="trailing" id="q5L-Cj-Xa7"/>
             </constraints>
+            <point key="canvasLocation" x="26.5" y="52.5"/>
         </view>
     </objects>
 </document>
