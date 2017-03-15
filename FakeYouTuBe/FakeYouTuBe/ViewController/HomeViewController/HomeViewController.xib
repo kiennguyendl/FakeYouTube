@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -47,23 +47,23 @@
                         </collectionView>
                     </subviews>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="6te-n7-JFM" secondAttribute="trailing" id="4jW-hx-pqI"/>
-                        <constraint firstAttribute="height" constant="50" id="BtT-dX-3lJ"/>
-                        <constraint firstItem="6te-n7-JFM" firstAttribute="leading" secondItem="jRU-IN-rQi" secondAttribute="leading" id="YlI-JI-7t7"/>
-                        <constraint firstItem="6te-n7-JFM" firstAttribute="top" secondItem="jRU-IN-rQi" secondAttribute="top" id="iEQ-hd-GLk"/>
-                        <constraint firstAttribute="bottom" secondItem="6te-n7-JFM" secondAttribute="bottom" id="laP-VL-SUr"/>
+                        <constraint firstItem="6te-n7-JFM" firstAttribute="top" secondItem="jRU-IN-rQi" secondAttribute="top" id="03Q-eh-c42"/>
+                        <constraint firstAttribute="trailing" secondItem="6te-n7-JFM" secondAttribute="trailing" id="93O-QB-4sN"/>
+                        <constraint firstItem="6te-n7-JFM" firstAttribute="leading" secondItem="jRU-IN-rQi" secondAttribute="leading" id="DeH-jt-CGg"/>
+                        <constraint firstAttribute="height" constant="50" id="eBn-mI-187"/>
+                        <constraint firstAttribute="bottom" secondItem="6te-n7-JFM" secondAttribute="bottom" id="eML-HN-ho4"/>
                     </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="PNw-8X-D3D" secondAttribute="bottom" id="Dsf-nW-NxO"/>
-                <constraint firstItem="jRU-IN-rQi" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="JhA-Or-N8U"/>
-                <constraint firstItem="PNw-8X-D3D" firstAttribute="top" secondItem="jRU-IN-rQi" secondAttribute="bottom" id="SvN-H1-XTb"/>
-                <constraint firstAttribute="trailing" secondItem="jRU-IN-rQi" secondAttribute="trailing" id="fDB-xn-Qzr"/>
-                <constraint firstItem="PNw-8X-D3D" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="iNw-yE-bmz"/>
-                <constraint firstItem="jRU-IN-rQi" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="jgo-Sr-nkZ"/>
-                <constraint firstAttribute="trailing" secondItem="PNw-8X-D3D" secondAttribute="trailing" id="q5L-Cj-Xa7"/>
+                <constraint firstAttribute="trailing" secondItem="jRU-IN-rQi" secondAttribute="trailing" id="9pM-WP-jCx"/>
+                <constraint firstItem="jRU-IN-rQi" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="B9y-9p-BIq"/>
+                <constraint firstItem="PNw-8X-D3D" firstAttribute="top" secondItem="jRU-IN-rQi" secondAttribute="bottom" id="Epk-Ci-Eok"/>
+                <constraint firstItem="jRU-IN-rQi" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="iAO-H7-EyF"/>
+                <constraint firstAttribute="bottom" secondItem="PNw-8X-D3D" secondAttribute="bottom" id="iU2-or-Nzs"/>
+                <constraint firstItem="PNw-8X-D3D" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ku7-WZ-QBt"/>
+                <constraint firstAttribute="trailing" secondItem="PNw-8X-D3D" secondAttribute="trailing" id="yWH-AH-x0u"/>
             </constraints>
             <point key="canvasLocation" x="26.5" y="52.5"/>
         </view>

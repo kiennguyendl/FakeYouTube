@@ -35,7 +35,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegateFlowLayout {
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if collectionView == menuBarCollectionView{
+        if collectionView == self.menuBarCollectionView{
             return 4
         }else{
             return 6
@@ -45,8 +45,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == menuBarCollectionView{
             let cellMenuBar = collectionView.dequeueReusableCell(withReuseIdentifier: "CellMenuBar", for: indexPath) as! MenuBarCollectionViewCell
-            cellMenuBar.backgroundColor = UIColor.blue
-            //cellMenuBar.imageIconMenu.image = UIImage(named: "home")
+            //cellMenuBar.backgroundColor = UIColor.blue
+            cellMenuBar.imageIconMenu.image = UIImage(named: "home")
             return cellMenuBar
         }else{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VideoCell", for: indexPath)
@@ -55,11 +55,11 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        if collectionView == collectionView{
+        if collectionView == self.collectionView{
             let height = (self.view.frame.width - 32) * (9 / 16)
             return CGSize(width: self.view.frame.width, height: height + 16 + 69)
         }else{
-            return CGSize(width: self.viewMenuBar.frame.width / 4, height: self.viewMenuBar.frame.height)
+            return CGSize(width: self.viewMenuBar.bounds.width / 4, height: self.viewMenuBar.bounds.height)
         }
     }
 }
