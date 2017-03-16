@@ -14,7 +14,17 @@ class MenuBarCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        print("kien test")
     }
 
+    override var isHighlighted: Bool{
+        didSet{
+            imageIconMenu.tintColor = isHighlighted ? UIColor.white : UIColor.darkGray
+        }
+    }
+    
+    override var isSelected: Bool{
+        didSet{
+            imageIconMenu.tintColor = isSelected ? UIColor.white : UIColor.darkGray
+        }
+    }
 }

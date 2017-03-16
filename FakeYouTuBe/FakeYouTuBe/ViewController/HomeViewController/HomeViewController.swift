@@ -12,11 +12,12 @@ class HomeViewController: UIViewController, UICollectionViewDelegateFlowLayout {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var menuBarCollectionView: UICollectionView!
     @IBOutlet weak var viewMenuBar: UIView!
+    let listIConTabbar = ["HomeIcon", "TrendingIcon", "ListIcon", "ProfileIcon"]
     override func viewDidLoad() {
         
         
         super.viewDidLoad()
-        navigationItem.title = "Home"
+        navigationItem.title = "HomeIcon"
         navigationController?.navigationBar.isTranslucent = false
         
         collectionView.delegate = self
@@ -29,6 +30,9 @@ class HomeViewController: UIViewController, UICollectionViewDelegateFlowLayout {
         menuBarCollectionView.delegate = self
         menuBarCollectionView.dataSource = self
         menuBarCollectionView.register(UINib.init(nibName: "MenuBarCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CellMenuBar")
+        
+        let selectedIndexPath = NSIndexPath(row: 0, section: 0)
+        menuBarCollectionView.selectItem(at: selectedIndexPath as IndexPath, animated: false, scrollPosition: .centeredHorizontally)
     }
 
 }
@@ -45,8 +49,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == menuBarCollectionView{
             let cellMenuBar = collectionView.dequeueReusableCell(withReuseIdentifier: "CellMenuBar", for: indexPath) as! MenuBarCollectionViewCell
-            //cellMenuBar.backgroundColor = UIColor.blue
-            cellMenuBar.imageIconMenu.image = UIImage(named: "home")
+            cellMenuBar.imageIconMenu.image = UIImage(named: listIConTabbar[indexPath.item])?.withRenderingMode(.alwaysTemplate)
+            cellMenuBar.tintColor = UIColor.darkGray
             return cellMenuBar
         }else{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VideoCell", for: indexPath)
