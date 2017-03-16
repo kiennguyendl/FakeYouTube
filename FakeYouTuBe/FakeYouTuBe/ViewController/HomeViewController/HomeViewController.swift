@@ -9,32 +9,70 @@
 import UIKit
 
 class HomeViewController: UIViewController, UICollectionViewDelegateFlowLayout {
+    
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var menuBarCollectionView: UICollectionView!
     @IBOutlet weak var viewMenuBar: UIView!
+    
     let listIConTabbar = ["HomeIcon", "TrendingIcon", "ListIcon", "ProfileIcon"]
+    
+    var videos: [Video] = {
+       var blankSpaceVideo = Video()
+        blankSpaceVideo.title = "Taylor Swift - Blank Space"
+        blankSpaceVideo.thumbnailImageName = "taylor-swift"
+        return [blankSpaceVideo]
+    }()
     override func viewDidLoad() {
-        
-        
         super.viewDidLoad()
-        navigationItem.title = "HomeIcon"
-        navigationController?.navigationBar.isTranslucent = false
         
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        collectionView.register(UINib.init(nibName: "HomeCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "VideoCell")
-        collectionView.contentInset = UIEdgeInsetsMake(50, 0, 0, 0)
-        collectionView.scrollIndicatorInsets = UIEdgeInsetsMake(50, 0, 0, 0)
+        settingNavigation()
+        settingCollectionView()
+        
+    }
+    
+    func settingCollectionView() {
+        self.collectionView.delegate = self
+        self.collectionView.dataSource = self
+        self.collectionView.register(UINib.init(nibName: "HomeCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "VideoCell")
+        self.collectionView.contentInset = UIEdgeInsetsMake(50, 0, 0, 0)
+        self.collectionView.scrollIndicatorInsets = UIEdgeInsetsMake(50, 0, 0, 0)
         
         
-        menuBarCollectionView.delegate = self
-        menuBarCollectionView.dataSource = self
-        menuBarCollectionView.register(UINib.init(nibName: "MenuBarCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CellMenuBar")
+        self.menuBarCollectionView.delegate = self
+        self.menuBarCollectionView.dataSource = self
+        self.menuBarCollectionView.register(UINib.init(nibName: "MenuBarCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CellMenuBar")
         
         let selectedIndexPath = NSIndexPath(row: 0, section: 0)
-        menuBarCollectionView.selectItem(at: selectedIndexPath as IndexPath, animated: false, scrollPosition: .centeredHorizontally)
+        self.menuBarCollectionView.selectItem(at: selectedIndexPath as IndexPath, animated: false, scrollPosition: .centeredHorizontally)
     }
-
+    
+    func settingNavigation() {
+        self.navigationItem.title = "HomeIcon"
+        self.navigationController?.navigationBar.isTranslucent = false
+        
+        let titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: view.frame.width - 32, height: view.frame.height))
+        titleLabel.text = "Home"
+        titleLabel.textColor = UIColor.white
+        self.navigationItem.titleView = titleLabel
+        
+        //button search
+        let searchImage = UIImage(named: "SearchIcon")?.withRenderingMode(.alwaysOriginal)
+        let searchButtonItem = UIBarButtonItem(image: searchImage, style: .plain, target: self, action: #selector(handleSearch))
+        
+        
+        //button  more
+        let moreImage = UIImage(named: "MenuIcon")?.withRenderingMode(.alwaysOriginal)
+        let moreButtonItem = UIBarButtonItem(image: moreImage, style: .plain, target: self, action: #selector(handleMore))
+        self.navigationItem.rightBarButtonItems = [moreButtonItem, searchButtonItem ]
+    }
+    
+    func handleSearch() {
+        print("123")
+    }
+    
+    func handleMore() {
+        print("123")
+    }
 }
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource{
@@ -42,7 +80,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         if collectionView == self.menuBarCollectionView{
             return 4
         }else{
-            return 6
+            return videos.count
         }
     }
     
@@ -53,7 +91,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             cellMenuBar.tintColor = UIColor.darkGray
             return cellMenuBar
         }else{
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VideoCell", for: indexPath)
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VideoCell", for: indexPath) as! HomeCollectionViewCell
+            cell.video = videos[indexPath.item]
             return cell
         }
     }

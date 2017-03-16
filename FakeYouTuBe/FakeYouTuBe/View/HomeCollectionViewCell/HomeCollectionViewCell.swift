@@ -14,11 +14,14 @@ class HomeCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageProfile: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     
+    var video: Video?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         imageProfile.layer.cornerRadius = imageProfile.frame.width / 2
         imageProfile.layer.masksToBounds = true
+        //video = Video()
     }
 
 }
