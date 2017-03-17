@@ -14,13 +14,51 @@ class HomeCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageProfile: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     
-    var video: Video?
+    @IBOutlet weak var lblTitleHeightContraint: NSLayoutConstraint!
+    @IBOutlet weak var lblSubTitleHeightContraint: NSLayoutConstraint!
+    @IBOutlet weak var subTitle: UILabel!
+    var video: Video?{
+        didSet{
+            titleLabel.text = video?.title
+            imageThumnail.image = UIImage(named: (video?.thumbnailImageName)!)
+            
+            if let channelName = video?.channel?.name, let numberOfViews = video?.numberOfViews{
+                let numberFormat = NumberFormatter()
+                numberFormat.numberStyle = .decimal
+                
+                subTitle.text = "\(channelName) -  \(numberFormat.string(from: numberOfViews)!) - 2 years"
+            }
+            
+            if let profileImageName = video?.channel?.profileImageName {
+                imageProfile.image = UIImage(named: profileImageName)
+            }
+            
+            if let heightTextTitle = titleLabel?.intrinsicContentSize.width{
+                if heightTextTitle > (titleLabel.frame.width - 10){
+                    lblTitleHeightContraint.constant = 45
+                }
+                else{
+                    lblTitleHeightContraint.constant = 20
+                }
+            }
+            
+            if let heightSubTextTitle = subTitle?.intrinsicContentSize.width{
+                if heightSubTextTitle > (subTitle.frame.width - 10){
+                    lblSubTitleHeightContraint.constant = 45
+                }
+                else{
+                    lblSubTitleHeightContraint.constant = 20
+                }
+            }
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         imageProfile.layer.cornerRadius = imageProfile.frame.width / 2
         imageProfile.layer.masksToBounds = true
+        
         //video = Video()
     }
 

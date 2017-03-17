@@ -17,9 +17,15 @@ class HomeViewController: UIViewController, UICollectionViewDelegateFlowLayout {
     let listIConTabbar = ["HomeIcon", "TrendingIcon", "ListIcon", "ProfileIcon"]
     
     var videos: [Video] = {
-       var blankSpaceVideo = Video()
-        blankSpaceVideo.title = "Taylor Swift - Blank Space"
+        var channel = Channel()
+        channel.name = "ThisIsTheBestChannel gfdgsdfgsdgsdfgdfsgdf"
+        channel.profileImageName = "profileImage"
+        
+        var blankSpaceVideo = Video()
+        blankSpaceVideo.title = "Taylor Swift - Blank Space sfasdfsafsadfsadfsdfsadfsdf"
         blankSpaceVideo.thumbnailImageName = "taylor-swift"
+        blankSpaceVideo.channel = channel
+        blankSpaceVideo.numberOfViews = 23542453455
         return [blankSpaceVideo]
     }()
     override func viewDidLoad() {
@@ -34,6 +40,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegateFlowLayout {
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
         self.collectionView.register(UINib.init(nibName: "HomeCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "VideoCell")
+        
         self.collectionView.contentInset = UIEdgeInsetsMake(50, 0, 0, 0)
         self.collectionView.scrollIndicatorInsets = UIEdgeInsetsMake(50, 0, 0, 0)
         

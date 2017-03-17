@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CC58722E1E7A965C0024D77A /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC58722D1E7A965C0024D77A /* Video.swift */; };
+		CCA2ECAA1E7BC1D30001019A /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA2ECA91E7BC1D30001019A /* Channel.swift */; };
 		CCCC7E871E66B16F0010210A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCC7E861E66B16F0010210A /* AppDelegate.swift */; };
 		CCCC7E8E1E66B1700010210A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCCC7E8D1E66B1700010210A /* Assets.xcassets */; };
 		CCCC7E911E66B1700010210A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCCC7E8F1E66B1700010210A /* LaunchScreen.storyboard */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		CC58722D1E7A965C0024D77A /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		CCA2ECA91E7BC1D30001019A /* Channel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		CCCC7E831E66B16F0010210A /* FakeYouTuBe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FakeYouTuBe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCCC7E861E66B16F0010210A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCCC7E8D1E66B1700010210A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +51,7 @@
 			isa = PBXGroup;
 			children = (
 				CC58722D1E7A965C0024D77A /* Video.swift */,
+				CCA2ECA91E7BC1D30001019A /* Channel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F16EA9AF1E758E3D0084AC11 /* HomeCollectionViewCell.swift in Sources */,
+				CCA2ECAA1E7BC1D30001019A /* Channel.swift in Sources */,
 				CCCC7E871E66B16F0010210A /* AppDelegate.swift in Sources */,
 				F1188DC91E7848E500CC48BE /* MenuBarCollectionViewCell.swift in Sources */,
 				CC58722E1E7A965C0024D77A /* Video.swift in Sources */,
