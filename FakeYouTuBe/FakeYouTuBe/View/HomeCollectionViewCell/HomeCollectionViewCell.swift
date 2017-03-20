@@ -20,8 +20,9 @@ class HomeCollectionViewCell: UICollectionViewCell {
     var video: Video?{
         didSet{
             titleLabel.text = video?.title
-            imageThumnail.image = UIImage(named: (video?.thumbnailImageName)!)
-            
+            //imageThumnail.image = UIImage(named: (video?.thumbnailImageName)!)
+            setupThumnailImage()
+            setupProfileImage()
             if let channelName = video?.channel?.name, let numberOfViews = video?.numberOfViews{
                 let numberFormat = NumberFormatter()
                 numberFormat.numberStyle = .decimal
@@ -29,9 +30,9 @@ class HomeCollectionViewCell: UICollectionViewCell {
                 subTitle.text = "\(channelName) -  \(numberFormat.string(from: numberOfViews)!) - 2 years"
             }
             
-            if let profileImageName = video?.channel?.profileImageName {
-                imageProfile.image = UIImage(named: profileImageName)
-            }
+//            if let profileImageName = video?.channel?.profileImageName {
+//                imageProfile.image = UIImage(named: profileImageName)
+//            }
             
             if let heightTextTitle = titleLabel?.intrinsicContentSize.width{
                 if heightTextTitle > (titleLabel.frame.width - 10){
@@ -53,12 +54,23 @@ class HomeCollectionViewCell: UICollectionViewCell {
         }
     }
     
+    func setupThumnailImage() {
+        if let thumnailImageURl = video?.thumbnailImageName{
+            imageThumnail.loadImageFromURL(urlString: thumnailImageURl)
+        }
+    }
+    
+    func setupProfileImage()  {
+        if let profileImageURl = video?.channel?.profileImageName{
+            imageProfile.loadImageFromURL(urlString: profileImageURl)
+        }
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         imageProfile.layer.cornerRadius = imageProfile.frame.width / 2
         imageProfile.layer.masksToBounds = true
-        
+        imageProfile.contentMode = .scaleAspectFill
         //video = Video()
     }
 
