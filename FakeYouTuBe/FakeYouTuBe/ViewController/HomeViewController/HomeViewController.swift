@@ -55,9 +55,9 @@ class HomeViewController: UIViewController, UICollectionViewDelegateFlowLayout {
                     self.videos?.append(video)
                 }
                 
-                DispatchQueue.main.async {
+                //DispatchQueue.main.async {
                     self.collectionView.reloadData()
-                }
+                //}
                 
                 
             }catch let jsonError{
@@ -119,7 +119,8 @@ class HomeViewController: UIViewController, UICollectionViewDelegateFlowLayout {
     }
     
     func handleMore() {
-        print("123")
+        var blackView = BlackView()
+        blackView.handleMore()
     }
 }
 
@@ -127,8 +128,12 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == self.menuBarCollectionView{
             return 4
-        }else{
-            return videos!.count
+        }else {
+            if collectionView == self.collectionView{
+                return videos!.count
+            }else{
+                return 0
+            }
         }
     }
     

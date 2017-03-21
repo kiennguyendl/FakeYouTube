@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		213E8AA41E818AC100C114AF /* BlackView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 213E8AA31E818AC100C114AF /* BlackView.xib */; };
+		213E8AA61E818B1300C114AF /* BlackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213E8AA51E818B1300C114AF /* BlackView.swift */; };
+		213E8AB21E81A0D600C114AF /* SettingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 213E8AB11E81A0D600C114AF /* SettingView.xib */; };
+		213E8AB41E81A0E800C114AF /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213E8AB31E81A0E800C114AF /* SettingView.swift */; };
 		CC58722E1E7A965C0024D77A /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC58722D1E7A965C0024D77A /* Video.swift */; };
 		CCA2ECAA1E7BC1D30001019A /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA2ECA91E7BC1D30001019A /* Channel.swift */; };
 		CCCC7E871E66B16F0010210A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCC7E861E66B16F0010210A /* AppDelegate.swift */; };
@@ -22,6 +26,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		213E8AA31E818AC100C114AF /* BlackView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlackView.xib; sourceTree = "<group>"; };
+		213E8AA51E818B1300C114AF /* BlackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackView.swift; sourceTree = "<group>"; };
+		213E8AB11E81A0D600C114AF /* SettingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingView.xib; sourceTree = "<group>"; };
+		213E8AB31E81A0E800C114AF /* SettingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		CC58722D1E7A965C0024D77A /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		CCA2ECA91E7BC1D30001019A /* Channel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		CCCC7E831E66B16F0010210A /* FakeYouTuBe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FakeYouTuBe.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +57,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		213E8AA21E818AA500C114AF /* BlackView */ = {
+			isa = PBXGroup;
+			children = (
+				213E8AA51E818B1300C114AF /* BlackView.swift */,
+				213E8AA31E818AC100C114AF /* BlackView.xib */,
+			);
+			path = BlackView;
+			sourceTree = "<group>";
+		};
+		213E8AB01E81A0A200C114AF /* SettingView */ = {
+			isa = PBXGroup;
+			children = (
+				213E8AB11E81A0D600C114AF /* SettingView.xib */,
+				213E8AB31E81A0E800C114AF /* SettingView.swift */,
+			);
+			path = SettingView;
+			sourceTree = "<group>";
+		};
 		CC58722C1E7A964A0024D77A /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +134,8 @@
 		F16EA9A61E758D550084AC11 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				213E8AB01E81A0A200C114AF /* SettingView */,
+				213E8AA21E818AA500C114AF /* BlackView */,
 				F16EA9AC1E758E1D0084AC11 /* HomeCollectionViewCell */,
 			);
 			path = View;
@@ -193,9 +221,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F16EA9B01E758E3D0084AC11 /* HomeCollectionViewCell.xib in Resources */,
+				213E8AB21E81A0D600C114AF /* SettingView.xib in Resources */,
 				F1188DCA1E7848E500CC48BE /* MenuBarCollectionViewCell.xib in Resources */,
 				CCCC7E911E66B1700010210A /* LaunchScreen.storyboard in Resources */,
 				CCCC7E8E1E66B1700010210A /* Assets.xcassets in Resources */,
+				213E8AA41E818AC100C114AF /* BlackView.xib in Resources */,
 				F16EA9AB1E758DDF0084AC11 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -209,6 +239,8 @@
 			files = (
 				F16EA9AF1E758E3D0084AC11 /* HomeCollectionViewCell.swift in Sources */,
 				CCA2ECAA1E7BC1D30001019A /* Channel.swift in Sources */,
+				213E8AA61E818B1300C114AF /* BlackView.swift in Sources */,
+				213E8AB41E81A0E800C114AF /* SettingView.swift in Sources */,
 				CCD662A81E7F9CE200749A94 /* Extension.swift in Sources */,
 				CCCC7E871E66B16F0010210A /* AppDelegate.swift in Sources */,
 				F1188DC91E7848E500CC48BE /* MenuBarCollectionViewCell.swift in Sources */,
