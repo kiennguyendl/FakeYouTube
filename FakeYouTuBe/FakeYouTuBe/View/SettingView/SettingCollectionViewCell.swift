@@ -16,5 +16,14 @@ class SettingCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+    
+    var settingLauche: Setting? {
+        didSet{
+            titleSetting.text = self.settingLauche?.name
+            if let image = settingLauche?.image{
+                imageSetting.image = UIImage(named: image)
+            }
+        }
+    }
 
 }

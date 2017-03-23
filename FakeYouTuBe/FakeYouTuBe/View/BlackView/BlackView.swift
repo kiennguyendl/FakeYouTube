@@ -10,8 +10,20 @@ import UIKit
 
 class BlackView: UIView{
     var settingView: SettingView?
+    
     override func awakeFromNib() {
     }
+    
+//    let settings: [Setting] = {
+//        
+//        return [Setting(name: "Setting", image: "setting"),
+//                Setting(name: "Tearm and privacy policy", image: "private"),
+//                Setting(name: "Send Feedback", image: "feedback"),
+//                Setting(name: "Help", image: "help"),
+//                Setting(name: "Switch account", image: "ProfileIcon"),
+//                Setting(name: "Cancel", image: "cancel")]
+//    }()
+    
     func handleMore() {
         
         
@@ -25,7 +37,7 @@ class BlackView: UIView{
             self.alpha = 0
             
             UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
-                let height: CGFloat = 200
+                let height: CGFloat = CGFloat(settings.count * 50)
                 let y = window.frame.height - height
                 self.alpha = 1
                 self.settingView?.frame = CGRect(x: 0, y: y, width: (self.settingView?.frame.width)!, height: (self.settingView?.frame.height)!)
