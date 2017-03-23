@@ -9,14 +9,37 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingView" customModule="FakeYouTuBe" customModuleProvider="target">
+            <connections>
+                <outlet property="settingCollectionView" destination="EJ7-rb-xVg" id="Twp-Er-qMG"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SettingView" customModule="FakeYouTuBe" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="361"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="EJ7-rb-xVg">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="361"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aO8-q7-vEF">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="EJ7-rb-xVg" secondAttribute="bottom" id="iZD-4u-4fW"/>
+                <constraint firstItem="EJ7-rb-xVg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="t7I-OQ-ZmK"/>
+                <constraint firstAttribute="trailing" secondItem="EJ7-rb-xVg" secondAttribute="trailing" id="xS4-RO-tlj"/>
+                <constraint firstItem="EJ7-rb-xVg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="yfM-wu-3lq"/>
+            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="33.5" y="-93.5"/>
         </view>
     </objects>
 </document>

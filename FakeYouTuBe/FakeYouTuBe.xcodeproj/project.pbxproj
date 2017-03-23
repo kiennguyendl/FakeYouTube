@@ -11,6 +11,8 @@
 		213E8AA61E818B1300C114AF /* BlackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213E8AA51E818B1300C114AF /* BlackView.swift */; };
 		213E8AB21E81A0D600C114AF /* SettingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 213E8AB11E81A0D600C114AF /* SettingView.xib */; };
 		213E8AB41E81A0E800C114AF /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213E8AB31E81A0E800C114AF /* SettingView.swift */; };
+		CC2BDE381E8369E600CEDC70 /* SettingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2BDE361E8369E600CEDC70 /* SettingCollectionViewCell.swift */; };
+		CC2BDE391E8369E600CEDC70 /* SettingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC2BDE371E8369E600CEDC70 /* SettingCollectionViewCell.xib */; };
 		CC58722E1E7A965C0024D77A /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC58722D1E7A965C0024D77A /* Video.swift */; };
 		CCA2ECAA1E7BC1D30001019A /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA2ECA91E7BC1D30001019A /* Channel.swift */; };
 		CCCC7E871E66B16F0010210A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCC7E861E66B16F0010210A /* AppDelegate.swift */; };
@@ -30,6 +32,8 @@
 		213E8AA51E818B1300C114AF /* BlackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackView.swift; sourceTree = "<group>"; };
 		213E8AB11E81A0D600C114AF /* SettingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingView.xib; sourceTree = "<group>"; };
 		213E8AB31E81A0E800C114AF /* SettingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		CC2BDE361E8369E600CEDC70 /* SettingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingCollectionViewCell.swift; sourceTree = "<group>"; };
+		CC2BDE371E8369E600CEDC70 /* SettingCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingCollectionViewCell.xib; sourceTree = "<group>"; };
 		CC58722D1E7A965C0024D77A /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		CCA2ECA91E7BC1D30001019A /* Channel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		CCCC7E831E66B16F0010210A /* FakeYouTuBe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FakeYouTuBe.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,8 +73,10 @@
 		213E8AB01E81A0A200C114AF /* SettingView */ = {
 			isa = PBXGroup;
 			children = (
-				213E8AB11E81A0D600C114AF /* SettingView.xib */,
 				213E8AB31E81A0E800C114AF /* SettingView.swift */,
+				213E8AB11E81A0D600C114AF /* SettingView.xib */,
+				CC2BDE361E8369E600CEDC70 /* SettingCollectionViewCell.swift */,
+				CC2BDE371E8369E600CEDC70 /* SettingCollectionViewCell.xib */,
 			);
 			path = SettingView;
 			sourceTree = "<group>";
@@ -223,6 +229,7 @@
 				F16EA9B01E758E3D0084AC11 /* HomeCollectionViewCell.xib in Resources */,
 				213E8AB21E81A0D600C114AF /* SettingView.xib in Resources */,
 				F1188DCA1E7848E500CC48BE /* MenuBarCollectionViewCell.xib in Resources */,
+				CC2BDE391E8369E600CEDC70 /* SettingCollectionViewCell.xib in Resources */,
 				CCCC7E911E66B1700010210A /* LaunchScreen.storyboard in Resources */,
 				CCCC7E8E1E66B1700010210A /* Assets.xcassets in Resources */,
 				213E8AA41E818AC100C114AF /* BlackView.xib in Resources */,
@@ -242,6 +249,7 @@
 				213E8AA61E818B1300C114AF /* BlackView.swift in Sources */,
 				213E8AB41E81A0E800C114AF /* SettingView.swift in Sources */,
 				CCD662A81E7F9CE200749A94 /* Extension.swift in Sources */,
+				CC2BDE381E8369E600CEDC70 /* SettingCollectionViewCell.swift in Sources */,
 				CCCC7E871E66B16F0010210A /* AppDelegate.swift in Sources */,
 				F1188DC91E7848E500CC48BE /* MenuBarCollectionViewCell.swift in Sources */,
 				CC58722E1E7A965C0024D77A /* Video.swift in Sources */,
