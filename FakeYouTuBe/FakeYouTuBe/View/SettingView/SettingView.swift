@@ -28,7 +28,7 @@ class SettingView: UIView, UICollectionViewDelegateFlowLayout {
         let height: CGFloat = CGFloat(settings.count * 50)
         //let y = frame.height - height
         self.frame = CGRect(x: 0, y: frame.height, width: frame.width, height: height)
-        self.backgroundColor = UIColor.white
+        //self.backgroundColor = UIColor.white
         nibSetup()
     }
     
